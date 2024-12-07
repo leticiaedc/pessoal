@@ -1,21 +1,15 @@
 .introducao {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 100px;
   align-items: center;
 }
 
-.introducao h1 {
+.introducao-texto h1 {
   font-size: 4.5rem;
   line-height: 1.125;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   position: relative;
 }
 
-.introducao h1::before {
+.introducao-texto h1::before {
   content: "";
   display: block;
   width: 130px;
@@ -27,18 +21,19 @@
   z-index: -1;
 }
 
-.local {
+.introducao-local {
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 
-.local p {
+.introducao-local p {
   font-size: 1.5rem;
   color: #525252;
 }
 
 @media (max-width: 1000px) {
-  .introducao h1 {
+  .introducao-texto h1 {
     font-size: 3rem;
   }
 }
@@ -48,21 +43,34 @@
     grid-template-columns: 1fr 1fr;
     gap: 50px;
   }
-  .introducao h1 {
+  .introducao > img {
+    max-width: 90%;
+  }
+  .introducao-texto h1 {
     font-size: 2rem;
   }
-  .introducao h1::before {
+  .introducao-texto h1::before {
     width: 30px;
     height: 10px;
     left: 0px;
   }
+  .introducao-local p {
+    font-size: 1.25rem;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .introducao {
     grid-template-columns: 1fr;
   }
   .introducao img {
     display: none;
+  }
+  .introducao-texto h1, .introducao-local {
+    margin: 0px 0px 20px 40px;
+  }
+  .introducao-texto h1::before {
+    left: -20px;
+    top: -20px;
   }
 }

@@ -2,11 +2,6 @@ body {
   margin: 0;
   font-family: 'Fira Sans', Arial, sans-serif;
   color: #141414;
-  /* display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  gap: 60px;
-  margin-top: 30px; */
 }
 
 h1, h2, h3, p {
@@ -15,6 +10,8 @@ h1, h2, h3, p {
 
 a {
   text-decoration: none;
+  color: #141414;
+
 }
 
 ul, li {
@@ -29,9 +26,18 @@ img {
   display: block;
 }
 
+.estilo {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 100px;
+}
+
 .subtitulo {
-  font-size: 8rem;
-  line-height: 1;
+  font-size: 9rem;
+  line-height: 1.1;
   text-transform: uppercase;
   word-break: break-all;
   max-width: 4ch;
